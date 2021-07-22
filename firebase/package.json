@@ -1,0 +1,8 @@
+{
+  "name": "firebase-functions",
+  "scripts": {
+    "build": "npm run build --prefix functions",
+    "deploy": "npm run deploy --prefix functions"
+  },
+  "private": true
+}

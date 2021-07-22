@@ -1,0 +1,26 @@
+{
+  "name": "gcp-cloud-functions",
+  "config": {
+    "region": "asia-northeast1",
+    "gcp_project": "YOUR_PROJECT_ID",
+    "runtime": "nodejs14",
+    "function_name": "notifySlackBuild",
+    "topic": "cloud-builds",
+    "env_file": "./.env.yaml"
+  },
+  "scripts": {
+    "build": "tsc",
+    "deploy": "npm run build && gcloud functions deploy $npm_package_config_function_name --runtime $npm_package_config_runtime --region=$npm_package_config_region --trigger-topic $npm_package_config_topic --project=$npm_package_config_gcp_project --env-vars-file=$npm_package_config_env_file --entry-point=notifyBuild"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@slack/webhook": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.0"
+  },
+  "private": true
+}
