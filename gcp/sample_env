@@ -1,0 +1,16 @@
+# For GCP Setting
+PROJECT_ID="YOUR_PROJECT_ID"
+ACCOUNT="YOUR_ACCOUNT@gmail.com"
+FUNCTION_NAME="notifySlackBuild"
+ENTRY_POINT="notifyBuild"
+RUNTIME="nodejs14"
+REGION="asia-northeast1"
+TOPIC="cloud-builds"
+
+# For Notification Settings
+WEBHOOK_URL="YOUR_WEBHOOK_URL"
+SLACK_USERNAME=""
+SLACK_ICON_EMOJI: ""
+SLACK_ICON_URL=""
+SLACK_CHANNEL="#general"
+SLACK_LINK_NAMES: ""

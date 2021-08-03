@@ -110,6 +110,16 @@ $ gcloud functions deploy notifySlackBuild \
     --entry-point=notifyBuild
 ```
 
+### `deploy.sh` for GCP Cloud Functions
+
+deploy.sh is utility tool to deploy functions.
+
+```sh
+$ cp gcp
+$ cp sample_env .env
+$ ./deploy.sh .env
+```
+
 ## Licence
 
 [MIT](https://github.com/memory-lovers/cloudbuild-slack/blob/master/LICENCE)
